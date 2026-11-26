@@ -24,7 +24,6 @@ export default function App() {
         <Suspense fallback={null}>
           <SceneSetup isMobile={isMobile} />
           <SnowGlobeModel
-            isMobile={isMobile}
             position={[0, -1.1, 0]}
             scale={0.09}
             inside={inside}

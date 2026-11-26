@@ -140,7 +140,7 @@ export default function SnowGlobeModel(props) {
         />
         <SnowFlakes count={2000} />
       </mesh>
-      {!props.isMobile && <LumaWorld visible={insideMesh} />}
+      <LumaWorld visible={insideMesh} />
     </group>
   )
 }
