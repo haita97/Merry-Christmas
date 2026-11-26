@@ -6,7 +6,7 @@ extend({ LumaSplats: LumaSplatsThree })
 export default function LumaWorld({ visible }) {
   return (
     <lumaSplats
-      source="https://lumalabs.ai/capture/4da7cf32-865a-4515-8cb9-9dfc574c90c2"
+      source={`${process.env.PUBLIC_URL}/luma`}
       enableThreeShaderIntegration={false}
       position={[-250, -113, 50]}
       scale={208.5}
