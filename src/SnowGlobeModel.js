@@ -16,6 +16,8 @@ import SnowFlakes from './SnowFlakes'
 import FireWorks from './FireWorks'
 import LumaWorld from './LumaWorld'
 
+export const OUTSIDE_CAMERA_POSITION = [5.5, 0, 5.5]
+
 export default function SnowGlobeModel(props) {
   const { nodes, materials } = useGLTF(`${process.env.PUBLIC_URL}/snowglobe-transformed.glb`)
   const snowGlobeRef = useRef()
@@ -40,8 +42,8 @@ export default function SnowGlobeModel(props) {
 
   useLayoutEffect(() => {
     gsap.to(camera.position, {
-      z: props.inside ? 0.1 : 3,
-      x: props.inside ? 0.1 : 3,
+      z: props.inside ? 0.1 : OUTSIDE_CAMERA_POSITION[2],
+      x: props.inside ? 0.1 : OUTSIDE_CAMERA_POSITION[0],
       ease: 'power3.inOut',
       duration: 1.8
     })
