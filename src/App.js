@@ -29,14 +29,15 @@ export default function App() {
             inside={inside}
           />
 
-          <PositionalAudio
-            ref={audioRef}
-            loop
-            url={`${process.env.PUBLIC_URL}/music.mp3`}
-            distance={0.05}
-            autoplay={ready}
-            key={ready}
-          />
+          {ready && (
+            <PositionalAudio
+              ref={audioRef}
+              loop
+              url={`${process.env.PUBLIC_URL}/music.mp3`}
+              distance={0.05}
+              autoplay
+            />
+          )}
 
           <PostProcessingEffects />
         </Suspense>
